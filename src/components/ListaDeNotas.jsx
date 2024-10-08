@@ -5,16 +5,18 @@ import CardNota from "./CardNota";
     render(){
         return(
             <ul>
-                <li>
-                    <CardNota/>
-                </li>
-                <li>
-                    <CardNota/>
-                </li>
+                {Array.of("Trabalho","Estudos"). map((categoria)=> {
+                 return (
+                    <li>
+                        <div> {categoria}</div>
+                        <CardNota/>
+                    </li>
+                 );
+                })}
             </ul>
         );
     }
-}
+ }
 
 export default ListaDeNotas;
 
